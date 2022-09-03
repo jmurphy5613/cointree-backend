@@ -8,8 +8,8 @@ router.get('/get-all', async (req, res) => {
 });
 
 router.post('/create', async (req, res) => {
-    const { wallet, amount } = req.body;
-    const job = await Job.create({ wallet, amount });
+    const { wallet, amount, jobDescription } = req.body;
+    const job = await Job.create({ wallet, amount, jobDescription });
     res.json(job);
 });
 
